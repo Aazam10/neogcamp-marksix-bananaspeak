@@ -1,0 +1,10 @@
+#txt-Input{
+    width:80%;
+    height:100px;
+    display: block;
+    margin:25px auto;
+}
+#btn-translate{
+    display: block;
+    margin: 10px auto;
+}
