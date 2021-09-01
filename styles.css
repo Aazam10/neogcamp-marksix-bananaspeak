@@ -3,9 +3,11 @@
 body{
     font-family :  'Montserrat' , sans-serif;
     margin: 0;
+    padding: 0;
 }
 :root{
     --priamry-color:#F2C94C;
+    --secondary-color:#FEF3C7;
 }
 
 .nav-heading{
@@ -14,14 +16,16 @@ body{
     text-align: center;
     box-sizing: border-box;
     font-size: 2rem;
+    
 }
-main{
+.main-area{
+    
     
     max-width: 600px;
-    margin:auto;
+    margin: 0px auto;
     
     display: block;
-    padding: 1rem;
+    padding: 1.5rem;
 }
  #txt-Input{
     width:100%;
@@ -36,6 +40,24 @@ main{
 
 #txt-output{
     width:100%;
-    height:100px;
+    height:200px;
     border:1px solid black;
+    background-color: white;
 } 
+.bg{
+    background-color: var(--secondary-color);
+    height:77vh;
+}
+.footer{
+    background-color: var(--priamry-color);
+    height:15vh;
+}
+.ftr-heading{
+    text-align: center;
+    padding:3px;
+    margin: 0;
+}
+.ftr-txt{
+    max-width:650px;
+   margin:0 auto;
+}
