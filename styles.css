@@ -8,3 +8,10 @@
     display: block;
     margin: 10px auto;
 }
+
+#txt-output{
+    margin:10px auto;
+    max-width:80%;
+    height:100px;
+    border:1px solid black
+}

@@ -1,24 +1,34 @@
 // var username=prompt("what is your name");
 // alert("welcome js is working"+" "+ username);
 
-// var btnTranslate=document.querySelector("#btn-translate");
-// var btnInput=document.querySelector("#txt-Input");
-// var btnOutput=document.querySelector("#txt-output");
-
-// var clickHandler= function clickHandler(){
-//     btnOutput.innerHTML=`<div style="margin:10px auto; display:block; max-width:450px;">${btnInput.value}</div>`;
-// }
+var btnTranslate = document.querySelector("#btn-translate");
+var btnInput = document.querySelector("#txt-Input");
+var btnOutput = document.querySelector("#txt-output");
 
 
-// btnTranslate.addEventListener("click",clickHandler)
-var urlGenerator=function makeUrl(text){
-    var url="https://api.funtranslations.com/translate/minion.json?text="+text;
-    return url;
+serverUrl = "https://api.funtranslations.com/translate/minion.json";
+
+
+function makeUrl(inputText) {
+    return serverUrl + "?" + "text=" + inputText;
+
 }
 
-var finUrl=urlGenerator("I am superman");
-fetch(finUrl).then(response=>{
-    return response.json();
-}).then(json=>{
-    console.log(json.contents.translated);
-});
+
+
+
+
+
+function clickHandler() {
+
+    var text = btnInput.value;
+    var url = makeUrl(text);
+    fetch(url)
+        .then(response => response.json())
+        .then(json => {
+            var translatedText = json.contents.translated;
+            btnOutput.innerText = translatedText;
+        }).catch(err => alert("some error occured please try again later"));
+
+}
+btnTranslate.addEventListener("click", clickHandler);
