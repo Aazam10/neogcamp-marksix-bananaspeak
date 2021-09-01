@@ -13,12 +13,6 @@ function makeUrl(inputText) {
     return serverUrl + "?" + "text=" + inputText;
 
 }
-
-
-
-
-
-
 function clickHandler() {
 
     var text = btnInput.value;
