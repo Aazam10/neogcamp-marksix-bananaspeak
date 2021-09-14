@@ -33,8 +33,14 @@ body{
     
 } 
  #btn-translate{
+   padding:0.5rem;
     display: block;
-    margin: 10px auto;
+    width:150px;
+    border-radius: 0.3rem;
+    background-color: var(--priamry-color);
+    margin: 1rem auto;
+    font-size:1.5rem;
+    font-weight: bolder;
 }
 
 
